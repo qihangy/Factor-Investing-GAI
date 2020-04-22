@@ -1,37 +1,37 @@
 # factor-investing-GAI
 -- z-score.ipynb: transfer raw data from winsor_factors_univariate.csv and show the matrix with factors and industry's z_score <br/>
 -- pre-processing.ipynb: 
-Data Cleaning Process
-a. clean
-i. input: raw_Q_file.csv {quarter_compustat_0227.csv}
-1. raw Q file is the raw csv file from compustat fundamentals quarterly
-2. download all the variables and entire database from 1961-01 to the latest available date
-3. in the query filter for foreign incorporation code or fic == USA exchange code or exchg == 11, 12 or 14
-ii. output: df_rdq_output.csv; df_Q_output.csv
-iii. package: clean_quarterly.py
-Compustat fundamentals quarterly data
-b. clean
-i. input: annual.csv; df_rdq_output.csv
-Compustat fundamentals annual data
-ii. output: df_A_output.csv
-iii. package: clean_annual.py
-c. link fundamental data with prices
-i. input: wprice.csv;
-ii. output: linkedprice.csv
+Data Cleaning Process <br/>
+a. clean <br/>
+i. input: raw_Q_file.csv {quarter_compustat_0227.csv} <br/>
+1. raw Q file is the raw csv file from compustat fundamentals quarterly <br/>
+2. download all the variables and entire database from 1961-01 to the latest available date <br/>
+3. in the query filter for foreign incorporation code or fic == USA exchange code or exchg == 11, 12 or 14 <br/>
+ii. output: df_rdq_output.csv; df_Q_output.csv <br/>
+iii. package: clean_quarterly.py <br/>
+Compustat fundamentals quarterly data <br/>
+b. clean <br/>
+i. input: annual.csv; df_rdq_output.csv <br/>
+Compustat fundamentals annual data <br/>
+ii. output: df_A_output.csv <br/>
+iii. package: clean_annual.py <br/>
+c. link fundamental data with prices <br/>
+i. input: wprice.csv; <br/>
+ii. output: linkedprice.csv <br/>
 
-2. Factor Calculations
-a. Quarterly factors
-i. Input: df_Q_output.csv; linkedprice.csv
-ii. Output: final_Q.csv
-iii. Package: quarterly_factors.py
-b. Annual factors
-i. Input: df_A_output.csv
-ii. Output: final_A.csv
-iii. Package: annual_factors.py
+2. Factor Calculations <br/>
+a. Quarterly factors <br/>
+i. Input: df_Q_output.csv; linkedprice.csv <br/>
+ii. Output: final_Q.csv <br/>
+iii. Package: quarterly_factors.py <br/>
+b. Annual factors <br/>
+i. Input: df_A_output.csv <br/>
+ii. Output: final_A.csv <br/>
+iii. Package: annual_factors.py <br/>
 
--- winsorize.py does size screens and cross-sectional winsorizing
-i. Input: final_Q.csv, final_A.csv
-ii. Output: all_factos.csv; winsor_factors_univariate.csv
+-- winsorize.py does size screens and cross-sectional winsorizing <br/>
+i. Input: final_Q.csv, final_A.csv <br/>
+ii. Output: all_factos.csv; winsor_factors_univariate.csv <br/>
 
 -- Calculate_score.ipynb: score calculation from the matrix with factors and industry's z_score <br/>
 -- theta-Score.ipynb: theta calculation and the return <br/>
