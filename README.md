@@ -4,7 +4,7 @@ We follow Brandt, Santa-Clara, and Valkanov (2004) in calculating our factor sco
 
 ===================================================================================== <br/>
 
-Main File:
+Main File:<br/>
 -- z-score.ipynb: transfer raw data from winsor_factors_univariate.csv and show the matrix with factors and industry's
 
 -- z_score Calculate_score.ipynb: score calculation from the matrix with factors and industry's z_score <br/>
@@ -19,7 +19,7 @@ Main File:
         ii. output: df_rdq_output.csv; df_Q_output.csv <br/>
         iii. package: clean_quarterly.py (Compustat fundamentals quarterly data)
    b. clean <br/>
-        i. input: annual.csv; df_rdq_output.csv (Compustat fundamentals annual data)
+        i. input: annual.csv; df_rdq_output.csv (Compustat fundamentals annual data)<br/>
         ii. output: df_A_output.csv <br/>
         iii. package: clean_annual.py <br/>
    c. link fundamental data with prices <br/>
