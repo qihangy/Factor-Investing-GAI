@@ -1,9 +1,16 @@
 # factor-investing-GAI
 
+We follow Brandt, Santa-Clara, and Valkanov (2004) in calculating our factor scores for the portfolio. They model the portfolio weight of each stock directly as a function of the factor. The coefficient(s) of this function is found by optimizing the investor’s average utility of the portfolio’s return over the sample period.
+
+===========================================================================================================================
+Main File:
 -- z-score.ipynb: transfer raw data from winsor_factors_univariate.csv and show the matrix with factors and industry's
+
 -- z_score Calculate_score.ipynb: score calculation from the matrix with factors and industry's z_score <br/>
+
 -- theta-Score.ipynb: theta calculation and the return <br/>
---- pre-processing.ipynb: 
+
+-- pre-processing.ipynb: 
 Data Cleaning Process <br/>
 clean <br/>
 i. input: raw_Q_file.csv {quarter_compustat_0227.csv}
@@ -35,11 +42,7 @@ iii. Package: annual_factors.py <br/>
 i. Input: final_Q.csv, final_A.csv <br/>
 ii. Output: all_factos.csv; winsor_factors_univariate.csv <br/>
 
--- Calculate_score.ipynb: score calculation from the matrix with factors and industry's z_score <br/>
--- theta-Score.ipynb: theta calculation and the return <br/>
-
-We follow Brandt, Santa-Clara, and Valkanov (2004) in calculating our factor scores for the portfolio. They model the portfolio weight of each stock directly as a function of the factor. The coefficient(s) of this function is found by optimizing the investor’s average utility of the portfolio’s return over the sample period.
-
+==========================================================================================================================
 Notes:
 1. Number of securities change over time. We only choose months in our sample when the
 number of securities exceeds 100.
