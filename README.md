@@ -2,7 +2,7 @@
 
 We follow Brandt, Santa-Clara, and Valkanov (2004) in calculating our factor scores for the portfolio. They model the portfolio weight of each stock directly as a function of the factor. The coefficient(s) of this function is found by optimizing the investor’s average utility of the portfolio’s return over the sample period.
 
-===========================================================================================================================
+==============================================================================================
 Main File:
 -- z-score.ipynb: transfer raw data from winsor_factors_univariate.csv and show the matrix with factors and industry's
 
@@ -11,38 +11,34 @@ Main File:
 -- theta-Score.ipynb: theta calculation and the return <br/>
 
 -- pre-processing.ipynb: 
-Data Cleaning Process <br/>
-clean <br/>
-i. input: raw_Q_file.csv {quarter_compustat_0227.csv}
-raw Q file is the raw csv file from compustat fundamentals quarterly download all the variables and entire database from 1961-01 to the latest available date in the query filter for foreign incorporation code or fic == USA exchange code
-or exchg == 11, 12 or 14 <br/>
-ii. output: df_rdq_output.csv; df_Q_output.csv <br/>
-iii. package: clean_quarterly.py <br/>
-Compustat fundamentals quarterly data <br/>
-b. clean <br/>
-i. input: annual.csv; df_rdq_output.csv <br/>
-Compustat fundamentals annual data <br/>
-ii. output: df_A_output.csv <br/>
-iii. package: clean_annual.py <br/>
-c. link fundamental data with prices <br/>
-i. input: wprice.csv; <br/>
-ii. output: linkedprice.csv <br/>
+1. Data Cleaning Process <br/>
+   a. clean <br/>
+        i. input: raw_Q_file.csv {quarter_compustat_0227.csv}
+            raw Q file is the raw csv file from compustat fundamentals quarterly download all the variables and entire database from 1961-01 to the latest available date in the query filter for foreign incorporation code or fic == USA exchange code or exchg == 11, 12 or 14 <br/>
+        ii. output: df_rdq_output.csv; df_Q_output.csv <br/>
+        iii. package: clean_quarterly.py (Compustat fundamentals quarterly data)
+   b. clean <br/>
+        i. input: annual.csv; df_rdq_output.csv (Compustat fundamentals annual data)
+        ii. output: df_A_output.csv <br/>
+        iii. package: clean_annual.py <br/>
+   c. link fundamental data with prices <br/>
+        i. input: wprice.csv; <br/>
+        ii. output: linkedprice.csv <br/>
 
 2. Factor Calculations <br/>
-a. Quarterly factors <br/>
-i. Input: df_Q_output.csv; linkedprice.csv <br/>
-ii. Output: final_Q.csv <br/>
-iii. Package: quarterly_factors.py <br/>
-b. Annual factors <br/>
-i. Input: df_A_output.csv <br/>
-ii. Output: final_A.csv <br/>
-iii. Package: annual_factors.py <br/>
+   a. Quarterly factors <br/>
+        i. Input: df_Q_output.csv; linkedprice.csv <br/>
+        ii. Output: final_Q.csv <br/>
+        iii. Package: quarterly_factors.py <br/>
+   b. Annual factors <br/>
+        i. Input: df_A_output.csv <br/>
+        ii. Output: final_A.csv <br/>
+        iii. Package: annual_factors.py <br/>
+   c. winsorize.py does size screens and cross-sectional winsorizing <br/>
+        i. Input: final_Q.csv, final_A.csv <br/>
+        ii. Output: all_factos.csv; winsor_factors_univariate.csv <br/>
 
--- winsorize.py does size screens and cross-sectional winsorizing <br/>
-i. Input: final_Q.csv, final_A.csv <br/>
-ii. Output: all_factos.csv; winsor_factors_univariate.csv <br/>
-
-==========================================================================================================================
+=========================================================================================
 Notes:
 1. Number of securities change over time. We only choose months in our sample when the
 number of securities exceeds 100.
