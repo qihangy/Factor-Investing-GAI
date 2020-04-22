@@ -5,8 +5,13 @@
 -- theta-Score.ipynb: theta calculation and the return <br/>
 
 We follow Brandt, Santa-Clara, and Valkanov (2004) in calculating our factor scores for the portfolio. They model the portfolio weight of each stock directly as a function of the factor. The coefficient(s) of this function is found by optimizing the investor’s average utility of the portfolio’s return over the sample period.
-Let the portfolio weights, benchmark weights (cap-weighted), and score vector for month 𝑡 be
 
-representedbyvector𝑊,𝑊,and𝑆 respectively.For𝑁securitiestheyhavea𝑁×1shape.Then
-𝑡𝑡𝑡
-the portfolio weights can be represented as a sum of benchmark weights and scores.
+Notes:
+1. Number of securities change over time. We only choose months in our sample when the
+number of securities exceeds 100.
+2. The number of samples (stocks) differ for each factor. Hence, the benchmark portfolios are
+slightly different for each factor. The benchmark stats in all the portfolio tables is for B/M.
+3. Our benchmark portfolio returns show 99% correlation with the market portfolio returns from
+Kenneth French’s website.
+4. The average risk-free rate in the sample is 0.0461 (annualized).
+5. P-values for theta’s are all either zero or close to zero.
