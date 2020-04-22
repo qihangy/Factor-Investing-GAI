@@ -5,6 +5,7 @@ We follow Brandt, Santa-Clara, and Valkanov (2004) in calculating our factor sco
 ===================================================================================== <br/>
 
 Main File:<br/>
+
 -- z-score.ipynb: transfer raw data from winsor_factors_univariate.csv and show the matrix with factors and industry's
 
 -- z_score Calculate_score.ipynb: score calculation from the matrix with factors and industry's z_score <br/>
@@ -17,7 +18,7 @@ Main File:<br/>
         i. input: raw_Q_file.csv {quarter_compustat_0227.csv}
             raw Q file is the raw csv file from compustat fundamentals quarterly download all the variables and entire database from 1961-01 to the latest available date in the query filter for foreign incorporation code or fic == USA exchange code or exchg == 11, 12 or 14 <br/>
         ii. output: df_rdq_output.csv; df_Q_output.csv <br/>
-        iii. package: clean_quarterly.py (Compustat fundamentals quarterly data)
+        iii. package: clean_quarterly.py (Compustat fundamentals quarterly data)<br/>
    b. clean <br/>
         i. input: annual.csv; df_rdq_output.csv (Compustat fundamentals annual data)<br/>
         ii. output: df_A_output.csv <br/>
