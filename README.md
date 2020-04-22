@@ -15,3 +15,4 @@ slightly different for each factor. The benchmark stats in all the portfolio tab
 Kenneth French’s website.
 4. The average risk-free rate in the sample is 0.0461 (annualized).
 5. P-values for theta’s are all either zero or close to zero.
+6. The timeframe for each factor vary. Generally, for annual factors its 1961-07 to 2018-11, and 1972-01 to 2018-11 for quarterly factors.
