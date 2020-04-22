@@ -1,4 +1,4 @@
-# factor-investing-GAI
+# Factor-Investing-GAI
 
 We follow Brandt, Santa-Clara, and Valkanov (2004) in calculating our factor scores for the portfolio. They model the portfolio weight of each stock directly as a function of the factor. The coefficient(s) of this function is found by optimizing the investor’s average utility of the portfolio’s return over the sample period.
 
