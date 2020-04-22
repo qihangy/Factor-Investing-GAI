@@ -1,14 +1,14 @@
 # factor-investing-GAI
 
-z-score.ipynb: transfer raw data from winsor_factors_univariate.csv and show the matrix with factors and industry's z_score Calculate_score.ipynb: score calculation from the matrix with factors and industry's z_score <br/>
-theta-Score.ipynb: theta calculation and the return <br/>
-pre-processing.ipynb: 
+-- z-score.ipynb: transfer raw data from winsor_factors_univariate.csv and show the matrix with factors and industry's
+-- z_score Calculate_score.ipynb: score calculation from the matrix with factors and industry's z_score <br/>
+-- theta-Score.ipynb: theta calculation and the return <br/>
+--- pre-processing.ipynb: 
 Data Cleaning Process <br/>
-a. clean <br/>
-i. input: raw_Q_file.csv {quarter_compustat_0227.csv} <br/>
-1. raw Q file is the raw csv file from compustat fundamentals quarterly <br/>
-2. download all the variables and entire database from 1961-01 to the latest available date <br/>
-3. in the query filter for foreign incorporation code or fic == USA exchange code or exchg == 11, 12 or 14 <br/>
+clean <br/>
+i. input: raw_Q_file.csv {quarter_compustat_0227.csv}
+raw Q file is the raw csv file from compustat fundamentals quarterly download all the variables and entire database from 1961-01 to the latest available date in the query filter for foreign incorporation code or fic == USA exchange code
+or exchg == 11, 12 or 14 <br/>
 ii. output: df_rdq_output.csv; df_Q_output.csv <br/>
 iii. package: clean_quarterly.py <br/>
 Compustat fundamentals quarterly data <br/>
