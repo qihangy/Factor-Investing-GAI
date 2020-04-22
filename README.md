@@ -19,23 +19,28 @@ Main File:<br/>
             raw Q file is the raw csv file from compustat fundamentals quarterly download all the variables and entire database from 1961-01 to the latest available date in the query filter for foreign incorporation code or fic == USA exchange code or exchg == 11, 12 or 14 <br/>
         ii. output: df_rdq_output.csv; df_Q_output.csv <br/>
         iii. package: clean_quarterly.py (Compustat fundamentals quarterly data)<br/>
+        <br/>
    b. clean <br/>
         i. input: annual.csv; df_rdq_output.csv (Compustat fundamentals annual data)<br/>
         ii. output: df_A_output.csv <br/>
         iii. package: clean_annual.py <br/>
+        <br/>
    c. link fundamental data with prices <br/>
         i. input: wprice.csv; <br/>
         ii. output: linkedprice.csv <br/>
+        <br/>
 
 2. Factor Calculations <br/>
    a. Quarterly factors <br/>
         i. Input: df_Q_output.csv; linkedprice.csv <br/>
         ii. Output: final_Q.csv <br/>
         iii. Package: quarterly_factors.py <br/>
+        <br/>
    b. Annual factors <br/>
         i. Input: df_A_output.csv <br/>
         ii. Output: final_A.csv <br/>
         iii. Package: annual_factors.py <br/>
+        <br/>
    c. winsorize.py does size screens and cross-sectional winsorizing <br/>
         i. Input: final_Q.csv, final_A.csv <br/>
         ii. Output: all_factos.csv; winsor_factors_univariate.csv <br/>
