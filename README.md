@@ -2,7 +2,7 @@
 
 We follow Brandt, Santa-Clara, and Valkanov (2004) in calculating our factor scores for the portfolio. They model the portfolio weight of each stock directly as a function of the factor. The coefficient(s) of this function is found by optimizing the investor’s average utility of the portfolio’s return over the sample period.
 
-===================================================================================== <br/>
+===================================================================================== 
 
 Main File:<br/>
 
@@ -14,6 +14,7 @@ Main File:<br/>
 
 -- pre-processing.ipynb: 
 1. Data Cleaning Process <br/>
+<br/>
    a. clean <br/>
         i. input: raw_Q_file.csv {quarter_compustat_0227.csv}
             raw Q file is the raw csv file from compustat fundamentals quarterly download all the variables and entire database from 1961-01 to the latest available date in the query filter for foreign incorporation code or fic == USA exchange code or exchg == 11, 12 or 14 <br/>
@@ -31,6 +32,7 @@ Main File:<br/>
         <br/>
 
 2. Factor Calculations <br/>
+<br/>
    a. Quarterly factors <br/>
         i. Input: df_Q_output.csv; linkedprice.csv <br/>
         ii. Output: final_Q.csv <br/>
